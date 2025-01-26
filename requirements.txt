@@ -1,0 +1,3 @@
+pynput
+cryptography
+python-dotenv
