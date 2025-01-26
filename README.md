@@ -8,7 +8,7 @@ This project is a Python-based **keylogger** designed to:
 
 It demonstrates the integration of key programming concepts such as cryptography, socket programming, and file handling, making it a practical application of Python in cybersecurity.
 
-> ⚠️ **Disclaimer**: This project is intended for educational purposes only. Do not deploy it in environments without explicit permission.
+> ⚠️ **Disclaimer**: This project is for educational purposes only. Unauthorized use of keyloggers or any form of malicious surveillance is illegal and unethical. Always seek explicit consent before deploying any monitoring software.
 
 ---
 
@@ -49,44 +49,32 @@ The project is designed to:
 
 ---
 
-## ⚙️ How It Works
+## 🚀 Getting Started
 
-### **1. Client-Side Workflow**
-- **Keystroke Logging**:
-  - The client uses the `pynput` library to capture keyboard events.
-  - Records key presses/releases in `strokes.txt`.
+### Prerequisites
+- Python 3.x
+- Required Python libraries:
+  - `pynput`
+  - `cryptography`
+  - `python-dotenv`
 
-- **Encryption**:
-  - Encrypts the file using the **Fernet encryption algorithm**.
-  - Generates a unique encryption key.
+### Setup
+1. Clone this repository:
+   ```bash
+   git clone <repository_url>
+   cd <repository_name>
+2. Install all required dependencies:
+   ```bash
+   pip install -r requirements.txt
+3. Set your server and port in the `.env` file:
+   ```bash
+   MY_SERVER=your_server_ip
+   MY_PORT=your_server_port
+4. Run the client and server:
+   ```bash
+   python client.py
+   python server.py
 
-- **File Hiding (Windows Only)**:
-  - Hides the encrypted file using the `ctypes` library to avoid casual detection.
-
-- **Data Transmission**:
-  - Sends the encrypted file and its encryption key to a remote server via a secure socket connection.
-
-### **2. Server-Side Workflow**
-- **Listening for Connections**:
-  - The server listens for incoming connections using the `socket` library.
-
-- **Receiving Data**:
-  - Receives the encryption key and the encrypted file from the client.
-
-- **Decryption**:
-  - Decrypts the file using the **Fernet encryption algorithm** and the received key.
-
-- **Storing Keystrokes**:
-  - Saves the decrypted data in `capture.txt` for further analysis.
----
-
-
----
 
 ## 📚 Conclusion
-This project demonstrates the capabilities of Python in creating secure, networked applications. By integrating keylogging, encryption, and remote data transmission, it serves as a foundational project for exploring **cybersecurity** and **ethical hacking** concepts.
-
----
-
-This improved version is professional, visually structured, and includes all your points while enhancing readability. Let me know if you want further tweaks!
-
+This project demonstrates the capabilities of Python in creating secure, networked applications. By integrating keylogging, encryption, and remote data transmission, it serves as a foundational project for exploring cybersecurity and ethical hacking concepts.
